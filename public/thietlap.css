@@ -1,0 +1,251 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #f8f9ff;
+}
+
+.container {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+.header {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #2b4470;
+    color: white;
+    padding: 10px 30px;
+    height: 60px;
+    size: 18px;
+}
+
+
+
+.menu-item.active {
+    background-color: #25406e;
+    border-bottom: 3px solid #de5d33;
+}
+
+.logo img {
+    width: 150px;
+    height: auto;
+}
+.menu {
+    display: flex;
+    justify-content: center; /* Căn giữa theo chiều ngang */
+    align-items: center;    /* Căn giữa theo chiều dọc */
+    height: 40px;
+    gap: 50px;
+    position: relative; /* Đảm bảo nó nằm trong dòng chảy tự nhiên */
+    top: 10px;
+}
+
+
+.menu-item a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.menu-item.active a {
+    color: #DE5D33;
+
+}
+.user-options {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+.notification-icon,
+.user-icon {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    background-color: #3b5b90;
+    border-radius: 50%;
+    cursor: pointer;
+}
+.notification-icon i,
+.user-icon i {
+    color: white;
+    font-size: 20px;
+}
+
+.badge {
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    background-color: red;
+    color: white;
+    border-radius: 50%;
+    padding: 3px 6px;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.menu-item {
+    text-decoration: none;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0px 4px;
+    gap: 4px;
+    width: 107px;
+    height: 40px;
+
+
+    flex: none;
+    flex-grow: 0;
+
+}
+
+.menu-item.active {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0px 4px;
+    gap: 4px;
+
+    width: 101px;
+    height: 40px;
+
+    background: #25406E;
+    border-bottom: 3px solid #DE5D33;
+
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+
+    color: #DE5D33;
+}
+
+
+.tabs {
+    display: flex;
+    border: 1px solid #88adec;
+    gap: 10px;
+    padding: 15px 30px;
+    background-color: #f1f1f1;
+    text-decoration: none;
+}
+
+.tab a {
+    text-decoration: none;
+    color: black;
+}
+
+.tab {
+    border: 1px solid #88adec;
+    border-radius: 4px;
+
+    background-color: white;
+    padding: 7px 8px;
+    cursor: pointer;
+}
+
+.tab.active {
+    background-color: #C6CFFC !important;
+    text-decoration: none;
+
+}
+
+.main-content {
+    flex: 1;
+    background-color: white;
+    border: 1px solid #ddd;
+}
+
+
+
+.cancel-btn,
+.confirm-btn {
+    padding: 8px 12px;
+    border: none;
+    cursor: pointer;
+    color: white;
+}
+
+.cancel-btn {
+    background-color: #ffffff;
+}
+
+.confirm-btn {
+    background-color: #007bff;
+}
+
+
+
+.light-icon {
+    color: #888;
+    font-weight: 300;
+    font-size: 24px;
+}
+
+
+.badge {
+    position: absolute;
+    top: -8px;
+    right: -8px;
+    background-color: red;
+    color: white;
+    border-radius: 50%;
+    padding: 2px 6px;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+
+
+
+.items-header {
+    display: flex;
+    justify-content: flex-end;
+    gap: 15px;
+    padding: 15px 30px;
+    flex: 0 !important;
+    background: #FFFFFF;
+    border: 2px solid #C6CFFC;
+    height: 60px;
+    /* text-align: center; */
+}
+
+.cancel-btn,
+.confirm-btn {
+    height: 30px;
+    padding: 7px 8px;
+    display: flex;
+    align-items: center;
+    padding: 7px 8px;
+    border: 2px solid #C6CFFC;
+    cursor: pointer;
+    color: rgb(0, 0, 0);
+    font-size: 14px;
+    gap: 8px;
+    border-radius: 5px;
+}
+
+.confirm-btn {
+    background-color: #25406E;
+    color: white;
+}
+
+
+
+
+.cancel-btn img,
+.confirm-btn img {
+    width: 16px;
+    height: 16px;
+}

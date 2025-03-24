@@ -1,0 +1,63 @@
+/* Menu styles */
+.menu {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.menu-item {
+    position: relative;
+    padding: 10px 20px;
+    color: #333;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Dropdown container */
+.menu-item.dropdown .tabs {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #f9f9f9;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 10;
+    padding: 10px 0;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+/* Show dropdown on hover */
+.menu-item.dropdown:hover .tabs {
+    display: block;
+}
+
+/* Tabs inside dropdown */
+.tabs .tab {
+    display: block;
+    width: 200px;
+    padding: 10px 20px;
+    text-align: left;
+    color: #333;
+    background: none;
+    border: none;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.tabs .tab:hover {
+    background-color: #25406E;
+    color: #DE5D33;
+}
+
+.tabs .tab a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.tabs .tab.active {
+    background-color: #25406E;
+    color: #DE5D33;
+    font-weight: bold;
+}
