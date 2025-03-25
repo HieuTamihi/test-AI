@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\DocumentController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\TelegramController;
 use App\Models\Message;
@@ -26,15 +27,13 @@ Route::get('/telegram-messages', [TelegramController::class, 'index']);
 Route::get('/get-messages', [TelegramController::class, 'getMessages']);
 
 //chat-AI
-Route::get('/chat', function () {
-    return view('chat');
+Route::get('/ask', function () {
+    return view('ask');
 });
-Route::post('/ask-ollama', function (Request $request) {
-    $response = Http::post('http://127.0.0.1:11434/api/generate', [
-        'model' => 'gemma:2b',
-        'prompt' => $request->input('prompt'),
-        'stream' => false
-    ]);
+Route::post('/ask', [DocumentController::class, 'ask'])->name('ask');
 
-    return response()->json($response->json());
+//
+Route::get('/import', function () {
+    return view('upload');
 });
+Route::post('/upload', [DocumentController::class, 'upload'])->name('upload');
