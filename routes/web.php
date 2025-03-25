@@ -19,7 +19,7 @@ use Illuminate\Support\Facades\Http;
 */
 
 Route::get('/', function () {
-    return view('chat');
+    return view('ask');
 });
 
 //telegram
